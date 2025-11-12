@@ -1,0 +1,270 @@
+/* ExamsReturn.module.css */
+
+.container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.4s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.subsection {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 2px solid #e0e0e0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tabHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  /* Para telas pequenas */
+}
+
+.tabWithButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  /* Espaço entre título e botão */
+  flex: 1;
+  /* Permite que ocupe espaço, mas botão fica à direita */
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  margin: 0;
+  transition: color 0.2s ease, border-bottom 0.2s;
+
+}
+
+.title:hover {
+  color: #007bff;
+}
+
+.activeTab {
+  color: #007bff;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 4px;
+}
+
+.searchBox {
+  display: flex;
+  justify-content: center;
+
+}
+
+.searchInput {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-height: 500px;
+  overflow-y: auto;
+
+  /* Scrollbar azul e simplificada */
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f0f0f0;
+
+  -webkit-scrollbar {
+    width: 8px;
+  }
+
+  -webkit-scrollbar-track {
+    background: #f0f0f0;
+    border-radius: 4px;
+  }
+
+  -webkit-scrollbar-thumb {
+    background: #007bff;
+    border-radius: 4px;
+  }
+
+  -webkit-scrollbar-thumb:hover {
+    background: #0056b3;
+  }
+}
+
+.card {
+  background: #f8f9fb;
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  background: #eef2f7;
+  transform: translateY(-2px);
+}
+
+.infoArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  color: #333;
+}
+
+.info {
+  text-align: center;
+  color: #555;
+}
+
+.error {
+  text-align: center;
+  color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .tabHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tabWithButton {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+}
+
+.searchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.searchBox {
+  flex: 1;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.4);
+}
+
+.startButton {
+  display: inline-block;
+  /* tamanho ajusta ao conteúdo */
+  padding: .6rem 1.5rem;
+  /* espaçamento interno leve */
+  border: 2px solid #007bff;
+  text-align: center;
+  background: transparent;
+  color: #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in;
+  align-self: center;
+}
+
+.startButton:hover {
+  background: #007bff;
+  color: white;
+ 
+}
+
+/* ⚡ Modal / overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+
+.closeButton {
+  padding: 1rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+  background: transparent;
+  margin-top: 1rem;
+  width: 100%;
+  padding: .5rem 0;
+  border: 2px solid #c53b3b;
+  background: transparent;
+  color: #c53b3b;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+
+.closeButton:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  color: white;
+}

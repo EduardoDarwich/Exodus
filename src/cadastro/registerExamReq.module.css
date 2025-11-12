@@ -1,0 +1,137 @@
+.register_page {
+  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.req_page {
+  background-image: url("../assets/fundo-login2.png"); /* ou use o caminho correto */
+  background-size: cover;       /* garante que a imagem cubra toda a tela */
+  background-repeat: no-repeat; /* evita repetir a imagem */
+  background-position: center;  /* centraliza a imagem */
+  min-height: 120vh;            /* altura mínima da viewport */
+  width: 100vw  ;                 /* largura total da viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Card principal */
+.register_card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 2.5rem 3rem;
+  margin-top: 3rem;
+  width: 90%;
+  max-width: 750px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Título e linha */
+.register_card h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.section_line {
+  border: none;
+  height: 2px;
+  background-color: #ddd;
+  border-radius: 2px;
+  margin-top: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Formulário */
+.form_area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 2rem;
+}
+
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.form_group label {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.4rem;
+}
+
+input:not([type="checkbox"]),
+select,
+textarea {
+  font-family: "Inter", sans-serif;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 0.9rem;
+  background: #f9f9f9;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  
+}
+
+
+.button_container {
+  grid-column: 2; /* alinhado à direita */
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.bttn {
+  margin-top: 4rem;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0.8rem 2rem;
+  border: 2px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 15px;
+ -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+
+.bttn:hover {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 30px 5px rgba(12, 126, 255, 0.815);
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+/* Mensagem de erro */
+.error {
+  color: #ff3333;
+  margin-top: 1.2rem;
+  font-weight: 600;
+}

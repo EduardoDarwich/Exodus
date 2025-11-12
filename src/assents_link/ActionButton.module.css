@@ -1,0 +1,37 @@
+.btnAction {
+  display: inline-block;          /* tamanho ajusta ao conteúdo */
+  padding: .6rem 1.5rem;          /* espaçamento interno leve */
+  border: 2px solid #007bff;
+  text-align: center;
+  background: transparent;
+  color: #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: all 0.2s ease-in;
+  align-self: center;           
+}
+
+.btnSuccess{
+  color: white;
+  background-color: #28a745;
+  border-color: #28a745;
+  box-shadow: 0 0 15px 3px #28a745;
+}
+.btnSuccess:hover{
+  background-color: #218838;
+  border-color: #218838;
+}
+.btnAction:hover:not(:disabled) {
+  background: #007bff;
+  color: white;
+  box-shadow: 0 0 30px 5px rgba(12, 126, 255, 0.815);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
