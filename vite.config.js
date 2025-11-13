@@ -10,7 +10,7 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ['scx-sistema-de-controle-de-exames.onrender.com'],
+    allowedHosts: ['https://exodus-be76.onrender.com'],
     host: "0.0.0.0", 
     port: 5173,
   }
