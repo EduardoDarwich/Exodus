@@ -161,7 +161,7 @@ export default function ExamsReturnPacList({ limit = null }) {
                     className={Style.startButton}
                     onClick={() => {
                       window.open(
-                        `http://localhost:8080/files/preview/${item.fileName}`,
+                        `https://controledeexame.onrender.com/files/preview/${item.fileName}`,
                         "_blank"
                       );
                     }}
