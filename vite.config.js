@@ -6,14 +6,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "react/jsx-runtime": "react/jsx-runtime",
-      
+
     },
   },
   server: {
     allowedHosts: ['https://exodus-be76.onrender.com'],
-    host: "0.0.0.0", 
+    host: "0.0.0.0",
     port: 5173,
   }
 
-  
+
 });

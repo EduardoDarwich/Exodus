@@ -3,7 +3,7 @@ import API_URL from "../apiConfig.js";
 //metodo principal ( data vai vir do Login.jsx / token tá armazenado no localStorage )
 export async function loginUsuario(loginData, role) {
   try {
-    let endpoint = "";
+    
 
 
 
@@ -13,7 +13,7 @@ export async function loginUsuario(loginData, role) {
       loginData
     );
 
-    const { Token, nome, role: userRole, id, email } = response.data;
+    const { Token,  role: userRole, id, email } = response.data;
 
     //Passar token pra manter a persistência do tipo do usuário até o logout
     localStorage.setItem("token",Token);
